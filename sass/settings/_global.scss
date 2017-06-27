@@ -1,0 +1,64 @@
+//Variables
+$primary-color: #142009;
+$accent-color: #F8FAE4;
+
+$path-img: '../images/';
+
+//fonts
+@font-face {
+	font-family: 'cursive-script';
+	src: url('LoversQuarrel-Regular.eot');
+	src: local('☺'), url('../fonts/LoversQuarrel-Regular.woff') format('woff'), url('../fonts/LoversQuarrel-Regular.ttf') format('truetype'), url('../fonts/LoversQuarrel-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$serif-text: 'https://fonts.googleapis.com/css?family=Lora:400,700';
+%serif-text-font{
+  font-family: $serif-text;
+}
+
+$script-logo: 'cursive-script';
+
+//Mixin for Text Styles
+@mixin text($size: 18px, $weight: 400, $color: #333) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+/////////////////////////////
+
+body {
+  @include text();
+  @extend %serif-text-font;
+}
+
+h1, h2, h3, h4, h5, h6, a, ul, li, img {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  @include text(48px);
+}
+h2 {
+  @extend %serif-text-font;
+  @include text($size: 48px, $weight:700);
+}
+h3 {
+  @extend %serif-text-font;
+  @include text($size: 36px);
+}
+h4 {
+  @extend %serif-text-font;
+  @include text($size: 28px);
+}
+h5 {
+  @extend %serif-text-font;
+  @include text($size: 22px);
+}
+h6 {
+  @extend %serif-text-font;
+  @include text($size: 16px, $weight: 700);
+  text-transform: uppercase;
+}

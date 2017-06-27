@@ -1,0 +1,40 @@
+.logo {
+  font-family: $script-logo;
+  @include text(72px, $color: #fff);
+  text-align: center;
+  padding: 10px 0;
+}
+
+.tagline {
+  @include text($color: #fff);
+  text-align: center;
+}
+
+header {
+  background-color: $primary-color;
+}
+
+nav {
+  background-color: $accent-color;
+  margin-top: 10px;
+}
+
+.hero {
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, .8),
+      rgba(255, 255, 255, .5)
+    ),
+    url('#{$path-img}hero.png')  no-repeat center;
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    width: 75%;
+    text-align: center;
+  }
+}

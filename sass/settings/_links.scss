@@ -1,0 +1,20 @@
+//Links
+a {
+  @extend %serif-text-font;
+  @include text( 18px, 700, $primary-color);
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  text-align:center;
+  li{
+    display: inline-block;
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 10px 20px;
+
+    }
+  }
+}
